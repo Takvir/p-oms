@@ -1,28 +1,130 @@
-<!DOCTYPE html5>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Hello!</title>
-    <!-- General META -->
+<!DOCTYPE html>
+<html>
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  </head>
-  <body>
-    <h2>Hello!</h2>
-    <button id="test">Show all articles</button>
-    <div id="list"></div>
-  </body>
-  <script src="lib/jquery/dist/jquery.min.js"></script>
-  <script src="vendor/ejs_production.js"></script>
-  <script>
-  $("#test").click(function(){
-    $.get("/api/articles", function(data, status){
-      var html = new EJS({url: 'views/article/list.ejs'}).render({articles:data});
-    $("#list").html(html);
-    });
-  });
-  </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polen-Online Mobile Store</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/user.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><i class="glyphicon glyphicon-phone"></i>LACKLUSTER</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+   <div class="jumbotron hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-push-7 phone-preview">
+                    <div class="iphone-mockup"></div>
+                </div>
+                <div class="col-md-6 col-md-pull-3 get-it">
+                    <h1>Our Fantastic App</h1>
+                    <p class="text-success">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                    <p><a class="btn btn-primary btn-lg" role="button" href="/products/allproduct/apple"><i class="fa fa-apple"></i> Shop Now</a><a class="btn btn-success btn-lg" role="button" href="#"><i class="fa fa-google"></i> Check Your Product Delivary Status</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                
+                <section class="testimonials">
+        <h2 class="text-center">People Love It!</h2>
+        
+    </section>
+            </div>
+           
+<div class="col-md-10 col-md-offset-1">
+                
+
+                 <div class="gallery">
+                   <img src="https://9to5mac.files.wordpress.com/2017/11/iphone-x-control-center.jpg?quality=82&strip=all&strip=all" width="500" height="300" >
+                  <div class="desc">
+                  <h5> </h5>
+                   <h6>Shop Now</h6>
+                   
+                  
+                  </div>
+                  </div>
+                  
+                    <div class="gallery">
+                   <img src="https://cdn.wccftech.com/wp-content/uploads/2017/09/galaxy-s8-custom-rom.jpg" width="500" height="300" >
+                  <div class="desc">
+                  <h5> </h5>
+                   <h6>Shop Now</h6>
+                  
+                  </div>
+                  </div>
+                    <div class="gallery">
+                   <img src="https://boygeniusreport.files.wordpress.com/2017/02/oneplus-4-concept-dbs-designing-01.jpg?quality=98&strip=all" width="500" height="300" >
+                  <div class="desc">
+                  <h5> </h5>
+                   <h6>Shop Now</h6>
+                  
+                  </div>
+                  </div>
+                    <div class="gallery">
+                   <img src="http://www.igyaan.in/wp-content/uploads/2016/01/Mi-5-01.jpeg" width="500" height="300" >
+                  <div class="desc">
+                  <h5> </h5>
+                   <h6>Shop Now</h6>
+                  
+                  </div>
+                  </div>
+                
+            </div>
+        </div>
+    
+    
+    
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Fantastic Features</h2>
+                    <p>Morbi non mauris massa. Duis elit mauris, malesuada nec suscipit ac, bibendum sed augue. Maecenas condimentum magna gravida, laoreet nunc sed, euismod sem. </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row icon-features">
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-cloud"></i>
+                            <p>Cloud-ready </p>
+                        </div>
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-piggy-bank"></i>
+                            <p>Saves You Money</p>
+                        </div>
+                        <div class="col-xs-4 icon-feature"><i class="glyphicon glyphicon-fire"></i>
+                            <p>Fire Proof</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>Mobile App © 2016</h5></div>
+                <div class="col-sm-6 social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>
