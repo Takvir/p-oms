@@ -20,7 +20,7 @@ app.route('/product/orders/all')
 	.get(orders.list)
 	.post(orders.create);
 	
-app.route('/api/orders/edit/:ordrId')
+app.route('/api/orders/edit/:orderId')
 	.get(orders.read)
 	.put( orders.update);
 

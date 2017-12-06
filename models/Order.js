@@ -71,5 +71,6 @@ var OrderSchema = {
   }
 }
 
-var order = mongoose.model('Order', OrderSchema, 'orders');
-module.exports = order;
+var Order = mongoose.model('Order', OrderSchema, 'orders');
+module.exports = Order;
+

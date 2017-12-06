@@ -52,5 +52,5 @@ var ProductSchema = {
   }
 }
 
-var product = mongoose.model('Product', ProductSchema, 'products');
-module.exports = product;
+var Product = mongoose.model('Product', ProductSchema, 'products');
+module.exports = Product;

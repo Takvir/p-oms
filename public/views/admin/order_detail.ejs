@@ -101,6 +101,9 @@
                 }).done(function(response){
                     console.log(response);
                     window.location.replace("/product/orders/all");
+                }).fail(function(response){
+                 // $("#error").text(JSON.parse(response.responseText).message);
+                    console.log(response);
                 });
             });
             $('#del').click(function(){

@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Order = require('./../models/order.js');
+var Order = require('./../models/Order.js');
 var errorHandler = require('./errors.server.controller');
 var _ = require('lodash');
 
@@ -104,9 +104,7 @@ exports.delete = function(req, res) {
 
 module.exports.update = function(req, res) {
   var order = req.order;
-
   	order = _.extend(order, req.body);
-
   	order.save(function(err) {
   		if (err) {
   			return res.status(400).send();
