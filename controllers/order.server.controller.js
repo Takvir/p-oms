@@ -16,7 +16,7 @@ exports.orderlist = function(req, res) {
       console.log("api called");
       console.log(data);
 
-      res.render('./../public/views/order/orderlist.ejs', {
+      res.render('./../public/views/admin/order_list.ejs', {
     		user: req.user || null,
     		request: req,
         orders: data
@@ -36,6 +36,8 @@ exports.order = function(req, res){
   });
 };
 
+
+
 exports.done = function(req, res){
   res.render('./../public/views/order/ordered.ejs', {
     user: req.user || null,
@@ -44,7 +46,7 @@ exports.done = function(req, res){
 };
 
 exports.view = function(req, res){
-  res.render('./../public/views/order/orderview.ejs', {
+  res.render('./../public/views/admin/order_detail.ejs', {
     user: req.user || null,
     request: req
   });

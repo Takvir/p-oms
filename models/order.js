@@ -47,7 +47,7 @@ var OrderSchema = {
     type: String,
     default: '',
     trim: true,
-    required: 'size required'
+    required: 'status required'
 
   },
   price: {

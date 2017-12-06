@@ -19,14 +19,16 @@ app.route('/product/orders/all')
  app.route('/api/orders')
 	.get(orders.list)
 	.post(orders.create);
+	
+app.route('/api/orders/edit/:ordrId')
+	.get(orders.read)
+	.put( orders.update);
 
   app.route('/api/orders/:orderId')
 	.get(orders.read)
   .delete(orders.delete);
 
-	app.route('/api/orders/edit/:ordrId')
-	.get(orders.read)
-	.put( orders.update);
+	
 
 
 

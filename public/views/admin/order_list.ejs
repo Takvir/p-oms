@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+     <link rel="stylesheet" type="text/css" href="/css/style.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -35,34 +38,30 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">View Detail</h3></div>
+                    <h3 class="panel-title">All Product List</h3></div>
                 <div class="panel-body"><span> </span>
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="panel panel-default">
-                            
-                            <div class="panel-body"><span> </span>
-
-                                <div>
-         <img src= <%=request.product.image %>  width="300" height="200">
-        <h3>Product ID:  <%=request.product._id %></h3>
-        <% console.log(request.product)%>
-        <h4>Name: <%=request.product.name %></h4>
-        <h4>Description:  <%=request.product.description %></h4>
-        <h4>Brand:  <%=request.product.brand %></h4>
-        <h4>Price:  <%=request.product.price %></h4>
-        
-        
-        <p> <%= request.product.content %> </p>
-        
-        <p>
-            <h2> Date: <%= request.product.created %></h2> 
-            </p>
-      
-            </p>
-            </div>
-
-                            </div>
-                        </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <table class="w3-table-all w3-centered" >
+                      <tr>
+                        <th>Customer name</th>
+                        <th>Phone</th>
+                        <th>Bill</th>
+                        <th>Product Name</th>
+                        <th>Status</th>
+                        <th>Detail</th>
+                      </tr>
+                      <% for(var i=0; i<orders.length; i++) { %>
+                      <tr>
+                          <td><%= orders[i].cname %></td>
+                          <td><%= orders[i].phone %></td>
+                          <td><%= orders[i].price %></td>
+                         <td><%= orders[i].pname %></td>
+                         <td><%= orders[i].status %></td>
+                         <td><a href=<%= "/product/ordered/" +orders[i]._id%>>Click Here</a></td>
+                      </tr>
+                      <%}%>
+                    
+                    </table>
                     </div>
                 </div>
             </div>
