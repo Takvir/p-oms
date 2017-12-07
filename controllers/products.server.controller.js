@@ -32,7 +32,7 @@ exports.customerview = function(req, res){
     } else {
       console.log("api called");
 
-        res.render('./../public/views/product/Customerview.ejs', {
+        res.render('./../public/views/customer/customerview.ejs', {
           user: req.user || null,
           request: req,
           products: data
